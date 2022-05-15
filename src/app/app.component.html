@@ -1,1 +1,20 @@
-<router-outlet> </router-outlet>
+<header class="flex bg-red-400 text-red-50">
+  <nav class="container mx-auto flex gap-8">
+    <a routerLink="/dashboard" class="inline-block py-4 text-xl font-bold"
+      >Angular Shell</a
+    >
+    <ul class="flex items-stretch">
+      <li class="flex items-stretch">
+        <a
+          routerLink="/dashboard"
+          routerLinkActive="font-medium"
+          class="flex items-center px-2 hover:bg-red-500"
+          >Dashboard</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>
+<main class="container mx-auto py-4">
+  <router-outlet></router-outlet>
+</main>
