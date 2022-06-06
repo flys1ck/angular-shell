@@ -8,12 +8,16 @@ const routes: Routes = [
   { path: 'dashboard', component: ShellDashboardComponent },
   {
     path: 'service',
-    loadChildren: () =>
-      loadRemoteModule({
+    loadChildren: async () => {
+      const m = await loadRemoteModule({
         type: 'module',
         remoteEntry: 'http://localhost:3000/remoteEntry.js',
         exposedModule: './Module',
-      }).then((m) => m.ServiceDashboardModule),
+      });
+      console.log(m);
+      console.log(m.ServiceDashboardModule);
+      return m.ServiceDashboardModule;
+    },
   },
 ];
 
