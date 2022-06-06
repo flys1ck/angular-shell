@@ -1,5 +1,4 @@
 import { loadRemoteEntry } from '@angular-architects/module-federation';
-import { enableProdMode } from '@angular/core';
 
 Promise.all([
   loadRemoteEntry({
