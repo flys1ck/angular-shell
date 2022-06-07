@@ -12,11 +12,9 @@ const routes: Routes = [
       const m = await loadRemoteModule({
         type: 'module',
         remoteEntry: 'http://localhost:4201/remoteEntry.js',
-        exposedModule: './Module',
+        exposedModule: './ServiceModule',
       });
-      console.log(m);
-      console.log(m.ServiceDashboardModule);
-      return m.ServiceDashboardModule;
+      return m.ServiceModule;
     },
   },
 ];
