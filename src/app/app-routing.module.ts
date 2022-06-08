@@ -10,8 +10,8 @@ const routes: Routes = [
     path: 'service',
     loadChildren: async () => {
       const m = await loadRemoteModule({
-        type: 'module',
-        remoteEntry: 'http://localhost:4201/remoteEntry.js',
+        type: 'manifest',
+        remoteName: 'angular-service',
         exposedModule: './ServiceModule',
       });
       return m.ServiceModule;
